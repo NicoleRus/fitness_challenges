@@ -1,5 +1,5 @@
 # fitness_challenges
-Collaborator names: Nicole Russo, Peter Neal, Brett Piatek, & Andrew Adkins
+Collaborator names: Nicole Russo, Peter Neal, Brett Piatek, & Drew Adkins
 
 Purpose: Project for UNT CSCE 3220, Human Computer Interfaces
 
