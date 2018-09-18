@@ -14,7 +14,8 @@ def create_app():
 	except OSError:
 		pass
 
-
+	from . import auth
+	app.register_blueprint(auth.auth)
 	return app
 
 app = create_app()

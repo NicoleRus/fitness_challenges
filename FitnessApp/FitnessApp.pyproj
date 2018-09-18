@@ -30,6 +30,9 @@
     <Compile Include="FitnessApp\db.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FitnessApp\auth.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="FitnessApp\__init__.py" />
     <Compile Include="FitnessApp\views.py" />
@@ -41,9 +44,13 @@
     <Folder Include="FitnessApp\static\fonts\" />
     <Folder Include="FitnessApp\static\scripts\" />
     <Folder Include="FitnessApp\templates\" />
+    <Folder Include="FitnessApp\templates\auth\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FitnessApp\schema.sql">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="FitnessApp\templates\auth\register.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="requirements.txt" />
