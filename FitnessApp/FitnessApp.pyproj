@@ -27,6 +27,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FitnessApp\db.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="FitnessApp\__init__.py" />
     <Compile Include="FitnessApp\views.py" />
@@ -40,6 +43,9 @@
     <Folder Include="FitnessApp\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FitnessApp\schema.sql">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="FitnessApp\static\content\bootstrap.css" />
     <Content Include="FitnessApp\static\content\bootstrap.min.css" />
