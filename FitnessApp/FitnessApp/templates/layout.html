@@ -26,8 +26,11 @@
                     <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{url_for('auth.register')}}">Register</a></li>
+                    <li><a href="{{url_for('auth.login')}}">Login</a></li>
+                    {%if g.user %}<li>{{g.user['username']}}</li> {%endif%}
                 </ul>
             </div>
+
         </div>
     </div>
 

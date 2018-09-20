@@ -50,6 +50,9 @@
     <Content Include="FitnessApp\schema.sql">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="FitnessApp\templates\auth\login.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="FitnessApp\templates\auth\register.html">
       <SubType>Code</SubType>
     </Content>
