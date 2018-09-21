@@ -17,7 +17,7 @@ def create_app():
 	from . import auth
 	app.register_blueprint(auth.auth)
 	from . import challenge
-	app.register_blueprint(challenge.challenge)
+	app.register_blueprint(challenge.rise)
 	return app
 
 app = create_app()
