@@ -27,6 +27,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FitnessApp\challenge.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FitnessApp\db.py">
       <SubType>Code</SubType>
     </Compile>
@@ -45,6 +48,7 @@
     <Folder Include="FitnessApp\static\scripts\" />
     <Folder Include="FitnessApp\templates\" />
     <Folder Include="FitnessApp\templates\auth\" />
+    <Folder Include="FitnessApp\templates\challenge\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FitnessApp\schema.sql">
@@ -54,6 +58,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="FitnessApp\templates\auth\register.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="FitnessApp\templates\challenge\create.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="requirements.txt" />

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form method="POST">
+    <label for="challenge_name">Name of Challenge</label>
+    <input name="challenge_name" id="challenge_name" required>
+
+    <label for="challenge_description">Description</label>
+    <input name="challenge_description" id="challenge_name">
+
+    <label for="points">Points on completion</label>
+    <input name="points" id="points">
+
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

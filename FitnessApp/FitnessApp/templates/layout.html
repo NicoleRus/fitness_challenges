@@ -27,10 +27,12 @@
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{url_for('auth.register')}}">Register</a></li>
                     <li><a href="{{url_for('auth.login')}}">Login</a></li>
-                    {%if g.user %}<li>{{g.user['username']}}</li> {%endif%}
+                    {%if g.user %}
+                    <li><span>{{g.user['username']}}</span></li>
+                    <li><a href="{{url_for('auth.logout')}}">Logout</a></li>
+                    {%endif%}
                 </ul>
             </div>
-
         </div>
     </div>
 
