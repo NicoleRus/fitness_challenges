@@ -43,54 +43,35 @@
   <ItemGroup>
     <Folder Include="FitnessApp\" />
     <Folder Include="FitnessApp\static\" />
-    <Folder Include="FitnessApp\static\content\" />
-    <Folder Include="FitnessApp\static\fonts\" />
-    <Folder Include="FitnessApp\static\scripts\" />
+    <Folder Include="FitnessApp\static\assets\" />
+    <Folder Include="FitnessApp\static\assets\bootstrap\" />
+    <Folder Include="FitnessApp\static\assets\bootstrap\css\" />
+    <Folder Include="FitnessApp\static\assets\bootstrap\js\" />
+    <Folder Include="FitnessApp\static\assets\css\" />
+    <Folder Include="FitnessApp\static\assets\img\" />
+    <Folder Include="FitnessApp\static\assets\js\" />
     <Folder Include="FitnessApp\templates\" />
     <Folder Include="FitnessApp\templates\auth\" />
-    <Folder Include="FitnessApp\templates\challenge\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FitnessApp\schema.sql">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="FitnessApp\templates\auth\login.html">
+    <Content Include="FitnessApp\static\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="FitnessApp\static\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="FitnessApp\static\assets\css\Highlight-Blue.css" />
+    <Content Include="FitnessApp\static\assets\css\Highlight-Clean.css" />
+    <Content Include="FitnessApp\static\assets\css\Navigation-Clean.css" />
+    <Content Include="FitnessApp\static\assets\css\styles.css" />
+    <Content Include="FitnessApp\static\assets\img\7q65k.jpg" />
+    <Content Include="FitnessApp\static\assets\js\jquery.min.js" />
+    <Content Include="FitnessApp\templates\auth\register.html" />
+    <Content Include="FitnessApp\templates\index.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="FitnessApp\templates\auth\register.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="FitnessApp\templates\challenge\challenges.html" />
-    <Content Include="FitnessApp\templates\challenge\create.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="requirements.txt" />
-    <Content Include="FitnessApp\static\content\bootstrap.css" />
-    <Content Include="FitnessApp\static\content\bootstrap.min.css" />
-    <Content Include="FitnessApp\static\content\site.css" />
-    <Content Include="FitnessApp\static\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="FitnessApp\static\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="FitnessApp\static\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="FitnessApp\static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="FitnessApp\static\scripts\bootstrap.js" />
-    <Content Include="FitnessApp\static\scripts\bootstrap.min.js" />
-    <Content Include="FitnessApp\static\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="FitnessApp\static\scripts\jquery-1.10.2.js" />
-    <Content Include="FitnessApp\static\scripts\jquery-1.10.2.min.js" />
-    <Content Include="FitnessApp\static\scripts\jquery-1.10.2.min.map" />
-    <Content Include="FitnessApp\static\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="FitnessApp\static\scripts\jquery.validate.js" />
-    <Content Include="FitnessApp\static\scripts\jquery.validate.min.js" />
-    <Content Include="FitnessApp\static\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="FitnessApp\static\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="FitnessApp\static\scripts\modernizr-2.6.2.js" />
-    <Content Include="FitnessApp\static\scripts\respond.js" />
-    <Content Include="FitnessApp\static\scripts\respond.min.js" />
-    <Content Include="FitnessApp\static\scripts\_references.js" />
-    <Content Include="FitnessApp\templates\about.html" />
-    <Content Include="FitnessApp\templates\contact.html" />
-    <Content Include="FitnessApp\templates\index.html" />
     <Content Include="FitnessApp\templates\layout.html" />
+    <Content Include="FitnessApp\templates\auth\login.html" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

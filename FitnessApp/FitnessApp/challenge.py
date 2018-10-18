@@ -20,7 +20,7 @@ def see_challenges():
 	user_challenges = list(challenges.find({'submitter': str(g.user['id'])})) #should return the user's submitted challenges
 	all_challenges = list(challenges.find())
 	#dumps(user_challenges)
-	return render_template('/challenge/challenges.html', yours = user_challenges, theirs = all_challenges)
+	return render_template('/challenge/challenges.html', yours = user_challenges, activities = all_challenges)
 
 @rise.route('/create', methods=('GET', 'POST')) #users that are not logged in shouldn't be able to make or submit challenges! Don't let them view this page, check that g.user['id'] exists
 def create():
@@ -42,14 +42,11 @@ def create():
 
 			c = {
 					"name": name,
+					"author": str(g.user['username']),
 					"description": description,
-					"points": points,
-					"submitter": str(g.user['id']),
 				}
 			challenge_id = challenges.insert_one(c).inserted_id
 			print("challenge id = " + str(challenge_id))
-
-
 
 			render_template('/challenge/create.html', results=c)
 

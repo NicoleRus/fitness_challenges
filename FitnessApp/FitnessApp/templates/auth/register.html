@@ -1,10 +1,23 @@
-{% extends "layout.html" %}
+﻿{% extends "layout.html" %}
+
 {% block content %}
-<form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username" required>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
-    <input type="submit" value="Register">
-</form>
+
+<div class="row justify-content-center" style="background-color: #9c0000;">
+    <div class="col-4">
+        <div class="container-fluid d-flex">
+            <form method="post">
+                <img class="rounded-circle img-fluid" src={{url_for('static', filename='assets/img/7q65k.jpg')}} width="300" height="300">
+                <input class="form-control" name="username" type="text" value="Username" id="username" style="margin: 0px;" required>
+                <input class="form-control" name="password" type="text" value="Password" id="password" style="margin: 5px;width: 200px;" required>
+                <div class="form-row justify-content-center">
+                    <div class="col-auto">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
+

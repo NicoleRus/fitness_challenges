@@ -1,38 +1,30 @@
 {% extends "layout.html" %}
 
+
+{%block extra_head%}
+    <link rel="stylesheet" href={{url_for('static', filename='assets/css/Highlight-Blue.css')}}>
+    <link rel="stylesheet" href={{url_for('static', filename='assets/css/Highlight-Clean.css')}}>
+{% endblock %}
+
 {% block content %}
 
-<div class="jumbotron">
-    <h1>Flask</h1>
-    <p class="lead">Flask is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
-
-
-<div>
-    <a href="{{url_for('rise.create')}}">Submit a challenge</a>(demo) <br />
-    <a href="{{url_for('rise.see_challenges')}}"> View all challenges</a>(also a demo)
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            Flask gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
+<div class="highlight-clean">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Get Started!</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+        </div>
+        <div class="buttons"><a class="btn btn-primary" role="button" href={{url_for('auth.login')}}>Login</a>
+        <button class="btn btn-light" type="button">Create Account</button></div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+</div>
+<div class="highlight-blue">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Highlight</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+        </div>
+        <div class="buttons"><a class="btn btn-primary" role="button" href="#">Primary</a></div>
     </div>
 </div>
 

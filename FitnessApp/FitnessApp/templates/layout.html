@@ -1,53 +1,39 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Hello, World!</title>
-    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
-    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>vurv</title>
+    {%block extra_head%}{%endblock%}
+
+    <link rel="stylesheet" href={{url_for('static', filename='assets/bootstrap/css/bootstrap.min.css')}}>
+    <link rel="stylesheet" href={{url_for('static', filename='assets/css/Navigation-Clean.css')}}>
+    <link rel="stylesheet" href={{url_for('static', filename='assets/css/styles.css')}}>
 </head>
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand">Our Fitness App</a>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container">
+                <a class="navbar-brand" href="#">vurv</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                     id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Explore</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Challenges</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">My Challenges</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Profile</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                    <li><a href="{{url_for('auth.register')}}">Register</a></li>
-                    <li><a href="{{url_for('auth.login')}}">Login</a></li>
-                    {%if g.user %}
-                    <li><span>{{g.user['username']}}</span></li>
-                    <li><a href="{{url_for('auth.logout')}}">Logout</a></li>
-                    {%endif%}
-                </ul>
-            </div>
-        </div>
+        </nav>
     </div>
 
-    <div class="container body-content">
-        {% block content %}{% endblock %}
-        <hr />
-        <footer>
-            <p>&copy; {{ year }} - Our Fitness App</p>
-        </footer>
-    </div>
+    {%block content%}{%endblock%}
 
-    <script src="/static/scripts/jquery-1.10.2.js"></script>
-    <script src="/static/scripts/bootstrap.js"></script>
-    <script src="/static/scripts/respond.js"></script>
-    {% block scripts %}{% endblock %}
-
+    <script src={{url_for('static', filename='assets/js/jquery.min.js')}}></script>
+    <script src={{url_for('static', filename='assets/bootstrap/js/bootstrap.min.js')}}></script>
 </body>
+
 </html>
