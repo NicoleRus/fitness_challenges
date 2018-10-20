@@ -23,14 +23,24 @@
                         <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Explore</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">Challenges</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">My Challenges</a></li>
+                        {% if g.user %}
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">Profile</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Log Out</a></li>
+
+                        {%else%}
+                        {%endif%}
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 
-    {%block content%}{%endblock%}
+    <div class="container justify-content-center">
+        {%block content%}{%endblock%}
+
+    </div>
+
+
 
     <script src={{url_for('static', filename='assets/js/jquery.min.js')}}></script>
     <script src={{url_for('static', filename='assets/bootstrap/js/bootstrap.min.js')}}></script>

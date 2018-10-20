@@ -52,8 +52,10 @@
     <Folder Include="FitnessApp\static\assets\js\" />
     <Folder Include="FitnessApp\templates\" />
     <Folder Include="FitnessApp\templates\auth\" />
+    <Folder Include="FitnessApp\templates\challenge\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FitnessApp\.gitignore" />
     <Content Include="FitnessApp\schema.sql">
       <SubType>Code</SubType>
     </Content>
@@ -61,11 +63,15 @@
     <Content Include="FitnessApp\static\assets\bootstrap\js\bootstrap.min.js" />
     <Content Include="FitnessApp\static\assets\css\Highlight-Blue.css" />
     <Content Include="FitnessApp\static\assets\css\Highlight-Clean.css" />
+    <Content Include="FitnessApp\static\assets\css\Login-Form-Clean.css" />
     <Content Include="FitnessApp\static\assets\css\Navigation-Clean.css" />
     <Content Include="FitnessApp\static\assets\css\styles.css" />
-    <Content Include="FitnessApp\static\assets\img\7q65k.jpg" />
+    <Content Include="FitnessApp\static\assets\img\cat.jpg" />
     <Content Include="FitnessApp\static\assets\js\jquery.min.js" />
     <Content Include="FitnessApp\templates\auth\register.html" />
+    <Content Include="FitnessApp\templates\challenge\challenges.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="FitnessApp\templates\index.html">
       <SubType>Code</SubType>
     </Content>
