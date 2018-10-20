@@ -11,7 +11,7 @@
             <img src={{url_for('static', filename='assets/img/cat.jpg')}} class="img-fluid rounded-circle img-responsive" width="300" height="300" alt="Cinque Terre">
         </div>
         <h2 class="sr-only">Login Form</h2>
-        <div class="form-group"><input class="form-control" type="email" name="username" placeholder="Username" /></div>
+        <div class="form-group"><input class="form-control" type="username" name="username" placeholder="Username" /></div>
         <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" /></div>
         <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href={{url_for('auth.register')}} class="forgot">Need an account?</a>
     </form>

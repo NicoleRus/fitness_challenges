@@ -4,6 +4,8 @@ from flask import (Blueprint, flash, g, redirect, render_template, request, sess
 from werkzeug.security import check_password_hash, generate_password_hash
 from FitnessApp.db import get_db
 from pymongo import MongoClient
+from bson import json_util
+
 
 
 auth = Blueprint('auth', __name__, url_prefix='/auth') #create a new blueprint named auth, append "/auth" to associated urls
@@ -30,8 +32,15 @@ def register():
 
 		if error is None: #make that new user yeh boit
 			db.execute('INSERT INTO user (username, password) VALUES (?,?)', (username, generate_password_hash(password)))
-
-
+			
+			u = {
+				"Username": username,
+				"email": request.form['email'],
+				"first_name": request.form['first_name'],
+				"last_name": request.form['last_name'],
+				}
+			mdb_users.insert_one(u).inserted_id
+			mdb_client.close()
 			db.commit()
 			return "success" #plain text kicks ass. indicates a user was successfully registered.
 
@@ -54,10 +63,28 @@ def login():
 		if error == None:
 			session.clear()
 			session['user_id'] = user['id']
-			return redirect(url_for('home'))
+			return redirect(url_for('auth.show_profile'))
 
 	return render_template('auth/login.html')
 
+
+@auth.route('/profile')
+def show_profile():
+	if g.user is None:
+		return redirect('auth/login')
+	else:
+		print("are we getting here?")
+
+		#need to get and format:
+		#users_subscriptions
+		#completed challenges
+		#user_created_challenged
+
+
+		#replace this with get_userprofile, get user profile by ID
+		user_profile = get_profile(g.user['username'])
+		print(user_profile)
+		return render_template('auth/profile.html', user_profile = user_profile)
 
 @auth.route('/logout')
 def logout():
@@ -71,3 +98,12 @@ def load_logged_in_user():
 		g.user = None
 	else:
 		g.user = get_db().execute('SELECT * FROM user WHERE id = ?', (user_id,)).fetchone()
+
+
+def get_profile(username):
+	mdb_client = MongoClient()
+	mdb_profile = mdb_client.fitness_app.users
+	profile = mdb_profile.find_one({"Username":username})
+	print(profile)
+	mdb_client.close()
+	return profile

@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block extra_head %}
+
+{% endblock %}
+
+{%block content%}
+<div class="container">
+
+    <div>
+        <div class="row">
+            <div class="col-auto col-md-3 m-auto"><img src={{url_for('static', filename='assets/img/cat.jpg')}} width="300" height="300" class="rounded-circle img-fluid flex-shrink-1" /></div>
+            <div class="col-md-4 align-self-center">
+                <h2 class="text-nowrap text-center d-flex flex-grow-1 flex-shrink-1 m-auto">{{user_profile.Username}}</h2>
+                <small>{{user_profile.first_name}} {{user_profile.last_name}}</small>
+            </div>
+            <div class="col m-auto offset-1">
+                <h1 class="text-center">Badges</h1>
+                <ul class="list-unstyled">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>This user's created challenges</h3>
+            <ul class="list-unstyled">
+                <!--Fill this area with the user's challenges they created -->
+                {% for x in user_profile.Challenges %}
+                <li class="list-group-item">
+                    <div class="card bg-primary border-secondary">
+                        <div class="card-header">
+                            <h5 class="mb-0">{{x}}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-light card-text">Challenge Description</p><a href="#" class="card-link text-light">Subscribe</a>
+                        </div>
+                    </div>
+                </li>
+                <br>
+                {%endfor%}
+            </ul>
+            <a class ="link" href="#">Make a new challenge</a>
+        </div>
+        <div class="col">
+            <h3>This user&#39;s current subscribed challenges</h3>
+            <ul class="list-unstyled">
+                {% for x in user_profile.Subscriptions %}
+                <li class="list-group-item">
+                    <div class="card bg-primary border-secondary">
+                        <div class="card-header">
+                            <h5 class="mb-0">{{x}}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-light card-text">Challenge Description</p><a href="#" class="card-link text-light">Subscribe</a>
+                        </div>
+                    </div>
+                </li>
+                <br>
+                {%endfor%}
+            </ul>
+        </div>
+        <div class="col">
+            <h3>This user&#39;s completed challenges</h3>
+            <ul class="list-unstyled">
+                {% for x in user_profile.Finished %}
+                <li class="list-group-item">
+                    <div class="card bg-primary border-secondary">
+                        <div class="card-header">
+                            <h5 class="mb-0">Challenge Name</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-light card-text">Challenge Description</p><a href="#" class="card-link text-light">Subscribe</a>
+                        </div>
+                    </div>
+                </li>
+                <br>
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+</div>
+
+    {%endblock%}

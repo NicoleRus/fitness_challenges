@@ -4,66 +4,23 @@
 {% endblock %}
 {%block content%}
 
-<div class="container-fluid justify-content-center m-auto">
-    <div class="row justify-content-center align-content-center">
-        <div class="col-md-6">
-                <div class="card text-center" style="width: 18rem;"">
-                    <div class="card-header">
-                        <h5 class="mb-0">All Challenges</h5>
-                    </div>
+<div class="container">
+    {%for x in challenges%}
+    <div class="row">
+        <div class="col-auto col-md-5 offset-md-4 m-auto">
+            <div class="card bg-primary border-secondary">
+                <div class="card-header">
+                    <h5 class="mb-0">{{x.Name}}</h5>
                 </div>
-
-            <div class="card text-center" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <p class="text-light card-text">{{x.Description}}</p><br />
+                    <p>Creator: {{x.Creator}}</p><a href={{url_for('rise.subscribe', OID=x['_id'])}} class="card-link text-light">Subscribe</a>
                 </div>
             </div>
-            <div class="card text-center" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card text-center" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="col-md-6">
-            <div class="card text-center" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card text-center" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card text-center" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
-
         </div>
     </div>
+    <br />
+    {%endfor%}
 </div>
 
 

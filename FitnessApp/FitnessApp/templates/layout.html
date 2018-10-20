@@ -21,10 +21,9 @@
                      id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Explore</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Challenges</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">My Challenges</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href={{url_for('rise.see_challenges')}}>Challenges</a></li>
                         {% if g.user %}
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Profile</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href={{url_for('auth.show_profile')}}>Profile</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">Log Out</a></li>
 
                         {%else%}
@@ -35,10 +34,7 @@
         </nav>
     </div>
 
-    <div class="container justify-content-center">
         {%block content%}{%endblock%}
-
-    </div>
 
 
 

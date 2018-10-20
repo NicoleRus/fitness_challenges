@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block extra_head %}
+
+{% endblock %}
+
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-auto m-auto">
+            <form method="post">
+                <h1>Create!</h1>
+                <div class="form-group"><label>Challenge Name</label><input type="text" placeholder="&quot;Running!&quot;, &quot;Jumping&quot;, etc" name="challenge_name" class="form-control form-control-sm" /></div>
+                <div class="form-group"><label>Description</label><input type="text" placeholder="&quot;In this challenge, you...!&quot;" name="challenge_description" class="form-control" /></div>
+                <div class="form-group"><label>Points</label><input type="text" placeholder="&quot;10&quot;, &quot;50&quot;, ... &quot;1000&quot;" name="points" class="form-control" /></div><button class="btn btn-primary btn-sm m-auto" type="submit">Button</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

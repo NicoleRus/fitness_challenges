@@ -72,6 +72,12 @@
     <Content Include="FitnessApp\templates\challenge\challenges.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="FitnessApp\templates\auth\profile.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="FitnessApp\templates\challenge\create.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="FitnessApp\templates\index.html">
       <SubType>Code</SubType>
     </Content>
