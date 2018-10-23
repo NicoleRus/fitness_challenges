@@ -67,6 +67,7 @@
     <Content Include="FitnessApp\static\assets\css\Navigation-Clean.css" />
     <Content Include="FitnessApp\static\assets\css\styles.css" />
     <Content Include="FitnessApp\static\assets\img\cat.jpg" />
+    <Content Include="FitnessApp\static\assets\img\profile-placeholder.png" />
     <Content Include="FitnessApp\static\assets\js\jquery.min.js" />
     <Content Include="FitnessApp\templates\auth\register.html" />
     <Content Include="FitnessApp\templates\challenge\challenges.html">
