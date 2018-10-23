@@ -8,7 +8,7 @@
   color: #7d8285;
 }
 
-.highlight-clean h2 {
+.highlight-clean h1 {
   font-weight: bold;
   margin-bottom: 25px;
   line-height: 1.5;
@@ -24,7 +24,7 @@
 }
 
 .highlight-clean .buttons {
-  text-align: center;
+     text-align: center;
 }
 
 .highlight-clean .buttons .btn {
@@ -52,8 +52,8 @@
   transform: translateY(1px);
 }
 
-.highlight-clean .buttons .btn-primary {
-  background-color: #055ada;
-  color: #fff;
-}
+    .highlight-clean .buttons .btn-primary {
+        background-color: #ff0000;
+        color: #fff;
+    }
 

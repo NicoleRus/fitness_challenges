@@ -1,0 +1,65 @@
+.highlight-red {
+  color: #000;
+  background-color: #fffs;
+  padding: 50px 0;
+  border-style: solid;
+  border-color: #ff0000;
+}
+
+.highlight-red p {
+    color: #7d8285;
+    line-height: 1.5;
+}
+
+.highlight-red h2 {
+  font-weight: normal;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  padding-top: 0;
+  margin-top: 0;
+  color: inherit;
+}
+
+.highlight-red .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 25px;
+}
+
+.highlight-red .buttons {
+  text-align: center;
+}
+
+.highlight-red .buttons .btn {
+  padding: 16px 32px;
+  margin: 6px;
+  border: none;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  line-height: 1;
+}
+
+.highlight-red .buttons .btn:hover {
+  opacity: 1;
+}
+
+.highlight-red .buttons .btn:active {
+  transform: translateY(1px);
+}
+
+    .highlight-red .buttons .btn-primary, .highlight-red .buttons .btn-primary:active {
+        border: 2px solid rgba(255,255,255,0.7);
+        border-radius: 6px;
+        border-color: #ff0000;
+        color: #313437;
+        padding: 14px 24px;
+        background: transparent;
+        transition: background-color 0.25s;
+    }
+

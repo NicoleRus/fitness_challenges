@@ -2,7 +2,7 @@
 
 
 {%block extra_head%}
-    <link rel="stylesheet" href={{url_for('static', filename='assets/css/Highlight-Blue.css')}}>
+    <link rel="stylesheet" href={{url_for('static', filename='assets/css/Highlight-Red.css')}}>
     <link rel="stylesheet" href={{url_for('static', filename='assets/css/Highlight-Clean.css')}}>
 {% endblock %}
 
@@ -11,8 +11,8 @@
 <div class="highlight-clean">
     <div class="container">
         <div class="intro">
-            <h2 class="text-center">Get Started!</h2>
-            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+            <h1 class="text-center"><span>vurv</span></h1>
+            <p class="text-center">Challenge your friends. Challenge yourself.</p>
         </div>
         <div class="buttons">
             <a class="btn btn-primary" role="button" href={{url_for('auth.login')}}>Login</a>
@@ -20,13 +20,15 @@
         </div>
     </div>
 </div>
-<div class="highlight-blue">
+<div class="highlight-red">
     <div class="container">
         <div class="intro">
-            <h2 class="text-center">Highlight</h2>
+            <h2 class="text-center">Is it changing</h2>
             <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
         </div>
-        <div class="buttons"><a class="btn btn-primary" role="button" href="#">Primary</a></div>
+        <div class="buttons">
+            <a class="btn btn-primary" role="button" href="#">Primary</a>
+        </div>
     </div>
 </div>
 
