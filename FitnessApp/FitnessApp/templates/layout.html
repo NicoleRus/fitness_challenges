@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>vurv</title>
+    <title>vurv - Are you up for the challenge?</title>
     {%block extra_head%}{%endblock%}
 
     <link rel="stylesheet" href={{url_for('static', filename='assets/bootstrap/css/bootstrap.min.css')}}>
@@ -16,7 +16,7 @@
     <div>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean">
             <div class="container">
-                <a class="navbar-brand" href="#">vurv</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand" href={{url_for('home')}}>vurv</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                      id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">

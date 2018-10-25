@@ -1,6 +1,6 @@
 .login-clean {
-  background: #f1f7fc;
-  padding: 80px 0;
+    background: #f8f9fa;
+    padding: 80px 0;
 }
 
 .login-clean form {
@@ -34,7 +34,7 @@
 }
 
 .login-clean form .btn-primary {
-  background: #f4476b;
+  background: #ff0000;
   border: none;
   border-radius: 4px;
   padding: 11px;

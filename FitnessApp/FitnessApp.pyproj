@@ -63,12 +63,13 @@
     </Content>
     <Content Include="FitnessApp\static\assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="FitnessApp\static\assets\bootstrap\js\bootstrap.min.js" />
-    <Content Include="FitnessApp\static\assets\css\Highlight-Blue.css" />
+    <Content Include="FitnessApp\static\assets\css\Highlight-Red.css" />
     <Content Include="FitnessApp\static\assets\css\Highlight-Clean.css" />
     <Content Include="FitnessApp\static\assets\css\Login-Form-Clean.css" />
     <Content Include="FitnessApp\static\assets\css\Navigation-Clean.css" />
     <Content Include="FitnessApp\static\assets\css\styles.css" />
     <Content Include="FitnessApp\static\assets\img\cat.jpg" />
+    <Content Include="FitnessApp\static\assets\img\profile-placeholder.png" />
     <Content Include="FitnessApp\static\assets\js\jquery.min.js" />
     <Content Include="FitnessApp\templates\auth\register.html" />
     <Content Include="FitnessApp\templates\challenge\challenges.html">
