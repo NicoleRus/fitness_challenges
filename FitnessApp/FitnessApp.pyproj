@@ -55,7 +55,9 @@
     <Folder Include="FitnessApp\templates\challenge\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FitnessApp\.gitignore" />
+    <Content Include="FitnessApp\.gitignore">
+      <Publish>True</Publish>
+    </Content>
     <Content Include="FitnessApp\schema.sql">
       <SubType>Code</SubType>
     </Content>
