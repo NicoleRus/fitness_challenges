@@ -42,7 +42,7 @@ def register():
 			mdb_users.insert_one(u).inserted_id
 			mdb_client.close()
 			db.commit()
-			return "success" #plain text kicks ass. indicates a user was successfully registered.
+			return render_template('auth/login.html') #plain text kicks ass. indicates a user was successfully registered.
 
 	return render_template('auth/register.html')
 
