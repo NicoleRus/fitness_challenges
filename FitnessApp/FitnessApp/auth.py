@@ -4,6 +4,7 @@ from flask import (Blueprint, flash, g, redirect, render_template, request, sess
 from werkzeug.security import check_password_hash, generate_password_hash
 from FitnessApp.db import get_db
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 from bson import json_util
 
 
@@ -42,7 +43,7 @@ def register():
 			mdb_users.insert_one(u).inserted_id
 			mdb_client.close()
 			db.commit()
-			return "success" #plain text kicks ass. indicates a user was successfully registered.
+			return redirect(url_for('auth.show_profile')) #plain text kicks ass. indicates a user was successfully registered.
 
 	return render_template('auth/register.html')
 
@@ -83,6 +84,19 @@ def show_profile():
 
 		#replace this with get_userprofile, get user profile by ID
 		user_profile = get_profile(g.user['username'])
+		mdb_client = MongoClient()
+		mdb_challenge = mdb_client.fitness_app.challenges
+		for x in user_profile['Subscriptions']:
+			user_profile['Subscriptions'].remove(x)
+			x = mdb_challenge.find_one(ObjectId(x))
+			user_profile['Subscriptions'].insert(0, x)
+
+
+		for x in user_profile['Challenges']:
+			user_profile['Challenges'].remove(x)
+			x = mdb_challenge.find_one(ObjectId(x))
+			user_profile['Challenges'].insert(0, x)
+
 		print(user_profile)
 		return render_template('auth/profile.html', user_profile = user_profile)
 

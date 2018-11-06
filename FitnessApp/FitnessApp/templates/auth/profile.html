@@ -33,10 +33,16 @@
                 <li class="list-group-item">
                     <div class="card bg-primary border-secondary">
                         <div class="card-header">
-                            <h5 class="mb-0">{{x}}</h5>
+                            <span class="float-sm-left">
+                                {{x.Name}}
+                            </span>
+                            <span class="float-sm-right">
+                                {{x.Points}}
+                            </span>
                         </div>
                         <div class="card-body">
-                            <p class="text-light card-text">Challenge Description</p><a href="#" class="card-link text-light">Subscribe</a>
+                            <p class="text-light card-text">{{x.Description}}</p><br />
+                            <p>Creator: {{x.Creator}}</p><a href={{url_for('rise.subscribe', OID=x['_id'])}} class="card-link text-light">Subscribe</a>
                         </div>
                     </div>
                 </li>
@@ -52,10 +58,16 @@
                 <li class="list-group-item">
                     <div class="card bg-primary border-secondary">
                         <div class="card-header">
-                            <h5 class="mb-0">{{x}}</h5>
+                            <span class="float-sm-left">
+                                {{x.Name}}
+                            </span>
+                            <span class="float-sm-right">
+                                {{x.Points}}
+                            </span>
                         </div>
                         <div class="card-body">
-                            <p class="text-light card-text">Challenge Description</p><a href="#" class="card-link text-light">Subscribe</a>
+                            <p class="text-light card-text">{{x.Description}}</p><br />
+                            <p>Creator: {{x.Creator}}</p><a href={{url_for('rise.subscribe', OID=x['_id'])}} class="card-link text-light">Subscribe</a>
                         </div>
                     </div>
                 </li>
@@ -70,10 +82,16 @@
                 <li class="list-group-item">
                     <div class="card bg-primary border-secondary">
                         <div class="card-header">
-                            <h5 class="mb-0">Challenge Name</h5>
+                            <span class="float-sm-left">
+                                {{x.Name}}
+                            </span>
+                            <span class="float-sm-right">
+                                {{x.Points}}
+                            </span>
                         </div>
                         <div class="card-body">
-                            <p class="text-light card-text">Challenge Description</p><a href="#" class="card-link text-light">Subscribe</a>
+                            <p class="text-light card-text">{{x.Description}}</p><br />
+                            <p>Creator: {{x.Creator}}</p><a href={{url_for('rise.subscribe', OID=x['_id'])}} class="card-link text-light">Subscribe</a>
                         </div>
                     </div>
                 </li>
