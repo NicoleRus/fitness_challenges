@@ -12,11 +12,11 @@
  
             <div class="card bg-primary border-secondary">
                 <div class="card-header d-flex">
-                    <span class="mr-auto">
+                    <span class="mr-auto h2">
                         {{x.Name}}
                     </span>
                     <span class="ml-auto">
-                        {{x.Category}}
+                        <img class="img-responsive" style="min-height:60px;height:60px;" src="{{url_for('static', filename='assets/img/icons/'+x.Category + '.png')}}">
                     </span>
                 </div>
                 <div class="card-body flex-column">

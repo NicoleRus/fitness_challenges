@@ -49,6 +49,7 @@
     <Folder Include="FitnessApp\static\assets\bootstrap\js\" />
     <Folder Include="FitnessApp\static\assets\css\" />
     <Folder Include="FitnessApp\static\assets\img\" />
+    <Folder Include="FitnessApp\static\assets\img\icons\" />
     <Folder Include="FitnessApp\static\assets\js\" />
     <Folder Include="FitnessApp\templates\" />
     <Folder Include="FitnessApp\templates\auth\" />
@@ -69,6 +70,12 @@
     <Content Include="FitnessApp\static\assets\css\Navigation-Clean.css" />
     <Content Include="FitnessApp\static\assets\css\styles.css" />
     <Content Include="FitnessApp\static\assets\img\cat.jpg" />
+    <Content Include="FitnessApp\static\assets\img\icons\cardio.png" />
+    <Content Include="FitnessApp\static\assets\img\icons\nuitrition.png" />
+    <Content Include="FitnessApp\static\assets\img\icons\recreation.png" />
+    <Content Include="FitnessApp\static\assets\img\icons\fitness.png" />
+    <Content Include="FitnessApp\static\assets\img\icons\vurv.jpg" />
+    <Content Include="FitnessApp\static\assets\img\icons\yoga.png" />
     <Content Include="FitnessApp\static\assets\img\profile-placeholder.png" />
     <Content Include="FitnessApp\static\assets\js\jquery.min.js" />
     <Content Include="FitnessApp\templates\auth\register.html" />
