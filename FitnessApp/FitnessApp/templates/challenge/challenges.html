@@ -5,25 +5,26 @@
 {%block content%}
 
 <div class="container">
+    <div class="card-columns">
+
+    
     {%for x in challenges%}
-    <div class="row">
-        <div class="col-auto col-md-5 offset-md-4 m-auto">
+ 
             <div class="card bg-primary border-secondary">
-                <div class="card-header">
-                    <span class="float-sm-left">
+                <div class="card-header d-flex">
+                    <span class="mr-auto">
                         {{x.Name}}
                     </span>
-                    <span class="float-sm-right">
-                        {{x.Points}}
+                    <span class="ml-auto">
+                        {{x.Category}}
                     </span>
                 </div>
-                <div class="card-body">
+                <div class="card-body flex-column">
                     <p class="text-light card-text">{{x.Description}}</p><br />
                     <p>Creator: {{x.Creator}}</p><a href={{url_for('rise.subscribe', OID=x['_id'])}} class="card-link text-light">Subscribe</a>
                 </div>
             </div>
-        </div>
-    </div>
+ 
     <br />
     {%endfor%}
 </div>

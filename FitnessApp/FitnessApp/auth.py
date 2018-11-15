@@ -86,16 +86,17 @@ def show_profile():
 		user_profile = get_profile(g.user['username'])
 		mdb_client = MongoClient()
 		mdb_challenge = mdb_client.fitness_app.challenges
-		for x in user_profile['Subscriptions']:
-			user_profile['Subscriptions'].remove(x)
-			x = mdb_challenge.find_one(ObjectId(x))
-			user_profile['Subscriptions'].insert(0, x)
+		if 'Subscriptions' in user_profile:
+			for x in user_profile['Subscriptions']:
+				user_profile['Subscriptions'].remove(x)
+				x = mdb_challenge.find_one(ObjectId(x))
+				user_profile['Subscriptions'].insert(0, x)
 
-
-		for x in user_profile['Challenges']:
-			user_profile['Challenges'].remove(x)
-			x = mdb_challenge.find_one(ObjectId(x))
-			user_profile['Challenges'].insert(0, x)
+		if 'Challenges' in user_profile:
+			for x in user_profile['Challenges']:
+				user_profile['Challenges'].remove(x)
+				x = mdb_challenge.find_one(ObjectId(x))
+				user_profile['Challenges'].insert(0, x)
 
 		print(user_profile)
 		return render_template('auth/profile.html', user_profile = user_profile)

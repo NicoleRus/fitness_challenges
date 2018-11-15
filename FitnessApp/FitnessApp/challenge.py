@@ -52,14 +52,14 @@ def create():
 
 		cname = request.form['challenge_name']
 		cdesc = request.form['challenge_description']
-		cpoints = request.form['points']
+		category = request.form['Category']
 
 
 		if cname is None:
 			return "fail"
 		elif cdesc is None:
 			return "fail"
-		elif cpoints is None:
+		elif category is None:
 			return "fail"
 		else:
 			mdb_client = MongoClient()
@@ -68,7 +68,7 @@ def create():
 			c = {
 				"Name": cname,
 				"Description": cdesc,
-				"Points": cpoints,
+				"Category": category,
 
 				"Creator": g.user['username']
 				}

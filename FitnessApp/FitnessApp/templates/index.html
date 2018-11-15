@@ -14,10 +14,12 @@
             <h1 class="text-center"><span>vurv</span></h1>
             <p class="text-center">Challenge your friends. Challenge yourself.</p>
         </div>
+        {%if not g.user%}
         <div class="buttons">
             <a class="btn btn-primary" role="button" href={{url_for('auth.login')}}>Login</a>
             <a class="btn btn-light" role="button" href={{url_for('auth.register')}}>Register</a>
         </div>
+        {%endif%}
     </div>
 </div>
 <div class="highlight-red">
