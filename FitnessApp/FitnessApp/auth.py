@@ -43,7 +43,14 @@ def register():
 			mdb_users.insert_one(u).inserted_id
 			mdb_client.close()
 			db.commit()
+			user = db.execute('SELECT * FROM user WHERE username = ?', (username,)).fetchone()
+
+			session.clear()
+			session['user_id'] = user['id']
 			return redirect(url_for('auth.show_profile')) #plain text kicks ass. indicates a user was successfully registered.
+		else:
+			return render_template('auth/register.html', errr = error)
+
 
 	return render_template('auth/register.html')
 
