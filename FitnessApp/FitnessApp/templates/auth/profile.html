@@ -18,32 +18,31 @@
                 <ul class="list-unstyled">
                     <li>
                         <img class="img-responsive" style="min-height:60px;height:60px;" src="{{url_for('static', filename='assets/img/icons/cardio.png')}}">
-                    </li>
-                    <li>
+                    
                         <img class="img-responsive" style="min-height:60px;height:60px;" src="{{url_for('static', filename='assets/img/icons/fitness.png')}}">
-                    </li>
-                    <li>
+                    
                         <img class="img-responsive" style="min-height:60px;height:60px;" src="{{url_for('static', filename='assets/img/icons/nuitrition.png')}}">
-                    </li>
-                    <li>
+                    
                         <img class="img-responsive" style="min-height:60px;height:60px;" src="{{url_for('static', filename='assets/img/icons/recreation.png')}}">
-                    </li>
-                    <li>
+
                         <img class="img-responsive" style="min-height:60px;height:60px;" src="{{url_for('static', filename='assets/img/icons/yoga.png')}}">
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+    <div><li><a class="link" href={{url_for('rise.create')}}>Make a new challenge</a></li></div>
     <div class="row" style="margin-top: 3%;">
         <div class="col">
+            
             <h2>Created</h2>
             <ul class="list-unstyled">
+                
                 <!--Fill this area with the user's challenges they created -->
-                <a class="link" href={{url_for('rise.create')}}>Make a new challenge</a>
+                
                 {% for x in user_profile.Challenges %}
                 <li class="list-group-item">
-                    <div class="card bg-primary border-secondary">
+                    <div class="card text-white bg-danger mb-3">
                         <div class="card-header d-flex">
                             <span class="mr-auto h2">
                                 {{x.Name}}
@@ -67,7 +66,7 @@
             <ul class="list-unstyled">
                 {% for x in user_profile.Subscriptions %}
                 <li class="list-group-item">
-                    <div class="card bg-primary border-secondary">
+                    <div class="card text-white bg-danger mb-3">
                         <div class="card-header d-flex">
                             <span class="mr-auto h2">
                                 {{x.Name}}
@@ -90,7 +89,7 @@
             <h2>Completed</h2>
             <ul class="list-unstyled">
                 {% for x in user_profile.Finished %}
-                <div class="card bg-primary border-secondary">
+                <div class="card text-white bg-danger mb-3">
                     <div class="card-header d-flex">
                         <span class="mr-auto h2">
                             {{x.Name}}
