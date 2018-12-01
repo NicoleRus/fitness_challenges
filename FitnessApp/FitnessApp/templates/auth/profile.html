@@ -63,6 +63,7 @@
         </div>
         <div class="col">
             <h2>Current</h2>
+            <a class="link" href={{url_for('rise.see_challenges')}}>Find New Challenges</a>
             <ul class="list-unstyled">
                 {% for x in user_profile.Subscriptions %}
                 <li class="list-group-item">
@@ -77,7 +78,7 @@
                         </div>
                         <div class="card-body flex-column">
                             <p class="text-light card-text">{{x.Description}}</p><br />
-                            <p>Creator: {{x.Creator}}</p><a href={{url_for('rise.subscribe', OID=x['_id'])}} class="card-link text-light">Subscribe</a>
+                            <p>Creator: {{x.Creator}}</p><a href={{url_for('rise.complete', OID=x['_id'])}} class="card-link text-light">Complete!</a>
                         </div>
                     </div>
                 </li>

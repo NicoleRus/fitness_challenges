@@ -43,7 +43,14 @@ def register():
 			mdb_users.insert_one(u).inserted_id
 			mdb_client.close()
 			db.commit()
+			user = db.execute('SELECT * FROM user WHERE username = ?', (username,)).fetchone()
+
+			session.clear()
+			session['user_id'] = user['id']
 			return redirect(url_for('auth.show_profile')) #plain text kicks ass. indicates a user was successfully registered.
+		else:
+			return render_template('auth/register.html', errr = error)
+
 
 	return render_template('auth/register.html')
 
@@ -97,6 +104,11 @@ def show_profile():
 				user_profile['Challenges'].remove(x)
 				x = mdb_challenge.find_one(ObjectId(x))
 				user_profile['Challenges'].insert(0, x)
+		if 'Finished' in user_profile:
+			for x in user_profile['Finished']:
+				user_profile['Finished'].remove(x)
+				x = mdb_challenge.find_one(ObjectId(x))
+				user_profile['Finished'].insert(0, x)
 
 		print(user_profile)
 		return render_template('auth/profile.html', user_profile = user_profile)
