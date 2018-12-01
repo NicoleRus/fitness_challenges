@@ -71,7 +71,7 @@
     <Content Include="FitnessApp\static\assets\css\styles.css" />
     <Content Include="FitnessApp\static\assets\img\cat.jpg" />
     <Content Include="FitnessApp\static\assets\img\icons\cardio.png" />
-    <Content Include="FitnessApp\static\assets\img\icons\nuitrition.png" />
+    <Content Include="FitnessApp\static\assets\img\icons\nutrition.png" />
     <Content Include="FitnessApp\static\assets\img\icons\recreation.png" />
     <Content Include="FitnessApp\static\assets\img\icons\fitness.png" />
     <Content Include="FitnessApp\static\assets\img\icons\vurv.jpg" />
