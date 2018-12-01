@@ -21,9 +21,18 @@ def subscribe(OID):
 	mdb_users.update({"Username": g.user['username']},{'$push':{"Subscriptions": OID,}})
 
 	#print(mdb_users.find_one({"_id": ObjectId(OID)}))
+	mdb_client.close()
+
 	return redirect('/auth/profile')
 
-
+@rise.route('/complete/<OID>')
+def complete(OID):
+	mdb_client = MongoClient()
+	mdb_users= mdb_client.fitness_app.users
+	mdb_users.update({"Username": g.user['username']},{'$pull':{"Subscriptions": OID,}})
+	mdb_users.update({"Username": g.user['username']},{'$push':{"Finished": OID,}})
+	mdb_client.close()
+	return redirect('/auth/profile')
 
 
 

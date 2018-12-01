@@ -104,6 +104,11 @@ def show_profile():
 				user_profile['Challenges'].remove(x)
 				x = mdb_challenge.find_one(ObjectId(x))
 				user_profile['Challenges'].insert(0, x)
+		if 'Finished' in user_profile:
+			for x in user_profile['Finished']:
+				user_profile['Finished'].remove(x)
+				x = mdb_challenge.find_one(ObjectId(x))
+				user_profile['Finished'].insert(0, x)
 
 		print(user_profile)
 		return render_template('auth/profile.html', user_profile = user_profile)
